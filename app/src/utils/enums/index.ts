@@ -1,3 +1,7 @@
+/*
+ * Declare list of colors in enum
+ */
+
 export enum ColorsPanel {
     YES = "#16A34A",
     ERROR = "#DC2626",
