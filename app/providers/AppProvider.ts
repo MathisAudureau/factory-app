@@ -22,6 +22,5 @@ export default class AppProvider implements BaseProvider {
       activities: [{name: "Test", type: "STREAMING", url: "https://twitch.tv/nase"}
       ]
     })
-
   }
 }
