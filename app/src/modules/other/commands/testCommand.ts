@@ -2,21 +2,26 @@ import { Command, BaseCommand } from 'ioc:factory/Core/Command'
 import {CommandInteraction, MessageEmbed} from 'discord.js'
 import { Embed } from "App/utils/types";
 import { ColorsPanel } from "App/utils/enums";
+import {Application} from "ioc:factory/Core";
+import {User} from "App/utils/interfaces";
 
 @Command({
   scope: 'GUILDS',
   options: {
-    name: 'test',
+    name: 'test-command',
     description: 'Commande de test',
     options: []
   }
 })
+
 export default class TestCommand extends BaseCommand {
   public async run (interaction: CommandInteraction): Promise<void> {
+    const client: any = Application.getClient()
+
     const replyEmbed: Embed = new MessageEmbed()
         .setTitle(`Embed de test`)
-        .setColor(ColorsPanel.YES)
-        .setDescription(`Ceci est un test`)
+        .setColor(ColorsPanel.INVISIBLE)
+        .setDescription(`Le bot est allumé depuis ${client.uptime}ms`)
 
     await interaction.reply({
       embeds: [replyEmbed],
