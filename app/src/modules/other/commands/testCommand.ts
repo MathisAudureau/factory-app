@@ -1,9 +1,8 @@
 import { Command, BaseCommand } from 'ioc:factory/Core/Command'
-import {CommandInteraction, MessageEmbed} from 'discord.js'
-import { Embed } from "App/utils/types";
-import { ColorsPanel } from "App/utils/enums";
 import {Application} from "ioc:factory/Core";
-import {User} from "App/utils/interfaces";
+import {CommandInteraction, MessageEmbed} from 'discord.js'
+import {Embed} from "App/utils/types";
+import {ColorsPanel} from "App/utils/enums";
 
 @Command({
   scope: 'GUILDS',
