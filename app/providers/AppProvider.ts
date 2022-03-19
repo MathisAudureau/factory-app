@@ -16,9 +16,6 @@ export default class AppProvider implements BaseProvider {
     const client: any = Application.getClient()
     Logger.send('success', `${Provider.APPLICATION_READY}`)
 
-    client.user.setActivity({
-    })
-
     client.user.setPresence({
       afk: false,
       status: "idle",
