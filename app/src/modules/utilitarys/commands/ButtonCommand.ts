@@ -20,7 +20,7 @@ export default class ButtonCommand extends BaseCommand {
         .setFooter({text: "Embed de test"})
 
     const linkButton: Button = new MessageButton()
-        .setLabel(`Cliquez ici`)
+        .setLabel(`Cliquez ici.`)
         .setStyle("SECONDARY")
         .setCustomId(`linkButton`)
         .setEmoji(`🧾`)
